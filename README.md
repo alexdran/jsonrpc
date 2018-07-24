@@ -4,7 +4,9 @@
 
 A PHP implementation for JSON-RPC (v2). Contains client and server libraries to handle requests including **notification** and **batch**.
 
-For from: https://github.com/johnstevenson/jsonrpc
+Authentication method added
+
+Fork from: https://github.com/johnstevenson/jsonrpc
 
 ## Contents
 * [About](#About)
