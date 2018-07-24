@@ -53,6 +53,14 @@ class Client
   */
   public $output = '';
 
+/**
+ * The authentication string if needed for server side authentication
+ *
+ * @var string
+ */
+  private $auth = '';
+
+
   private $url;
   private $transport = null;
   private $id = 0;
@@ -63,7 +71,6 @@ class Client
 
 
   const ERR_RPC_RESPONSE = 'Invalid Response';
-
 
   public function __construct($url, $transport = null)
   {
@@ -91,6 +98,11 @@ class Client
       $this->headers[] = $value;
     }
 
+  }
+
+  public function setAuth($auth)
+  {
+      $this->auth = $auth;
   }
 
 
@@ -157,6 +169,9 @@ class Client
     }
 
     $request = new Request($data);
+    if ($this->auth) {
+        $request->setAuth($this->auth);
+    }
 
     if ($request->fault)
     {
@@ -190,6 +205,10 @@ class Client
 
     try
     {
+        if ($this->auth) {
+            $data = str_replace(',"method"', '"auth":"' . $this->auth . '","method":', $data);
+        }
+
 
       if ($res = $this->transport->send('POST', $this->url, $data, $this->headers))
       {

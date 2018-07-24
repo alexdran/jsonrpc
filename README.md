@@ -4,6 +4,8 @@
 
 A PHP implementation for JSON-RPC (v2). Contains client and server libraries to handle requests including **notification** and **batch**.
 
+For from: https://github.com/johnstevenson/jsonrpc
+
 ## Contents
 * [About](#About)
 * [Installation](#Installation)
@@ -23,6 +25,9 @@ Full details at [jsonrpc.org][json-spec]. You may need to read this to get an ov
 ```php
 <?php
 $client = new JsonRpc\Client($url);
+// authentication if needed
+$client->setAuth('EZPqkbCyLEYZRMMZTFB5hNUR9TkWq3peMGN');
+
 $client->call('method', array($param1, $param2));
 
 // now do something with $client->result
