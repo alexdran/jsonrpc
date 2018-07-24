@@ -1,6 +1,6 @@
 {
 
-  "name": "jsonrpc/jsonrpc_auth",
+  "name": "alexdran/jsonrpc",
   "description": "JSON-RPC 2.0 client/server implementation - fork with auth",
   "keywords": ["json", "rpc", "json-rpc", "api"],
   "homepage": "https://github.com/alexdran/jsonrpc",
@@ -18,7 +18,7 @@
   },
 
   "autoload": {
-    "psr-0": {"JsonRpc": "src/"}
+    "psr-0": {"alexdran\\jsonrpc": "src/"}
   }
 
 }
