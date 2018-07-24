@@ -54,7 +54,7 @@ The easiest way is [through composer][composer]. Just create a `composer.json` f
 {
     "minimum-stability": "dev",
     "require": {
-        "jsonrpc/jsonrpc": "1.0.*"
+        "jsonrpc/jsonrpc_auth": "1.0.*"
     }
 }
 ```
