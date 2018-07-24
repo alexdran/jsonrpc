@@ -1,15 +1,15 @@
 {
 
-  "name": "jsonrpc/jsonrpc",
-  "description": "JSON-RPC 2.0 client/server implementation",
+  "name": "jsonrpc/jsonrpc_auth",
+  "description": "JSON-RPC 2.0 client/server implementation - fork with auth",
   "keywords": ["json", "rpc", "json-rpc", "api"],
-  "homepage": "http://github.com/johnstevenson/jsonrpc",
+  "homepage": "https://github.com/alexdran/jsonrpc",
   "type": "library",
   "license": "MIT",
   "authors": [
     {
-      "name": "John Stevenson",
-      "email": "john-stevenson@blueyonder.co.uk"
+      "name": "Alessandro Braccini",
+      "email": "t2@alexdran.net"
     }
   ],
 
