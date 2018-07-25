@@ -169,9 +169,6 @@ class Client
     }
 
     $request = new Request($data);
-    if ($this->auth) {
-        $request->setAuth($this->auth);
-    }
 
     if ($request->fault)
     {
@@ -208,7 +205,6 @@ class Client
         if ($this->auth) {
             $data = str_replace(',"method"', '"auth":"' . $this->auth . '","method":', $data);
         }
-
 
       if ($res = $this->transport->send('POST', $this->url, $data, $this->headers))
       {
